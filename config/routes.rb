@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  root 'welcome#index'
+  root 'attachments#index'
 
   resources :users, except: [:show, :update, :create, :index, :new, :edit, :destroy] do
     resources :attachments do
